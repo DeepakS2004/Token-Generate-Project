@@ -1,0 +1,50 @@
+﻿<Window x:Class="Project3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project3"
+        mc:Ignorable="d"
+        Title="Hospital" Height="450" Width="810">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\HP\OneDrive\Pictures\Saved Pictures\Hps.jpeg"></ImageBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="235"></ColumnDefinition>
+            <ColumnDefinition Width="110"></ColumnDefinition>
+            <ColumnDefinition Width="0"></ColumnDefinition>
+            <ColumnDefinition Width="320"></ColumnDefinition>
+            <ColumnDefinition Width="0"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="22"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="JK Hospital" Grid.Column="3" Grid.Row="0" Margin="20,0,0,0" FontSize="25" FontWeight="Bold" ></TextBlock>
+        <TextBlock Text="Patient Name" Grid.Column="1" Grid.Row="1" FontSize="15" FontWeight="Medium" ></TextBlock>
+        <TextBox x:Name="txtname" Grid.Row="1" Grid.Column="3" Margin="0,0,40,0" Width="280" FontSize="15" ></TextBox>
+        <Button x:Name="btntoken" Content="Token Generate" Grid.Column="5" Grid.Row="1"  Click="btntoken_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="8"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock Text="Token No :" Grid.Column="1" Grid.Row="3"  FontSize="15" FontWeight="Medium"></TextBlock>
+        <TextBox x:Name="txtno" Grid.Row="3" Grid.Column="3" FontSize="15" Width="100" Margin="0,0,220,0" ></TextBox>
+        <StackPanel Grid.Column="3" Grid.Row="5">
+            <TextBlock Text="Token Name" Margin="0,20,0,0" MouseEnter="TextBlock_MouseEnter" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold"></TextBlock>
+            <StackPanel Orientation="Horizontal" >
+                <TextBox x:Name="txttkname" FontSize="15" Margin="0,40,0,0" Height="30"  Width="300" ></TextBox>
+            </StackPanel>
+            <Button Content="Next" Height="38" Margin="10" Width="60" Click="Button_Click" />
+        </StackPanel>
+        
+    </Grid>
+</Window>
